@@ -62,6 +62,7 @@
                             <a href="http://berkeley.edu"
                             class="image"><img
                             height="120"
+                            src="./images/logos/ucbseal.png"
                             src="http://www.berkeley.edu/brand/img/seals/ucbseal_139_540.png"
                             alt="Nuclear Engineering, University of California, Berkeley"
                             frameborder="no"></a>
@@ -370,22 +371,6 @@
                             <p>Munk, Madicken. An analysis of Radiation-Induced Stresses of a Graphite Central Reflector in a Pebble Bed Fluoride Salt-Cooled Reactor Core. Diss. University of California Berkeley, 2013.</p>
                         </font></footer>
                     </section>
-                    <section>
-                        <h3>Future Work</h3>
-                        <div id="right">
-                            <font size="5" align="left">
-                            <p><b>Idea: </b> Perform lifetime evaluations on core components in emerging reactor designs based on coupled physics</p>
-                            <p><b>Deliverable: </b> software, lifetime characterization</p>
-                            <p><b>Collaborators:</b> Kairos Power, Westinghouse, INL</p>
-                            <p><b>Funding:</b> DOE-NE, ARPA-E, SBIR</p>
-                            </font>
-                        </div>
-                        <div id="left">
-                            <img style="margin-bottom:0" src="./images/PBFHR/evinci.png" height="350">
-                            <p style="margin-top:0; margin-bottom:0;"><font size="3" align="center"><b>Image Credit:</b> Westinghouse eVinci micro reactor <a href="http://www.westinghousenuclear.com/Portals/0/new%20plants/evincitm/GTO-0001_eVinci_flysheet_RSB_03-2019_003.pdf?ver=2019-04-04-140824-613">link</a> 
-                            </font></p>
-                        </div>
-                    </section>
                 </section>
                 <section data-transition="convex">
                     <section>
@@ -466,8 +451,9 @@
                         </small>
                     </section>
                     <section>
-                        <h3>Importance and the Adjoint</h3>
+                        <h3>Proof: Importance and the Adjoint</h3>
                         <small>
+                        <div id="left">
                             <p align="left">Notation:</p>
                             $\langle ab \rangle = \int a(P)b(P) dP$
                             <p align="left">Detector response</p>
@@ -478,11 +464,21 @@
                               &= \langle q \psi^{\dagger} \rangle \\
                               \end{align}
                             $
-                            <p align="left">Point source</p>
+                        </div>
+                        <div id="right" class="fragment">
+                            <p align="left">Consider a point source</p>
                             $q ( \vec{r}, E, \hat{\Omega}) = \delta(\vec{r}-\vec{r_0})\delta(\vec{E}-\vec{E_0})\delta(\vec{\hat{\Omega}}-\vec{\hat{\Omega}_0})$
+                            <p align="left">Integrate over phase space</p>
+                            $
+                            \begin{align}
+                            R &= \langle q \psi^{\dagger} \rangle \\
+                              &= \psi^{\dagger}
+                              \end{align}
+                            $
                             <font color="purple"><p align="left">Response = adjoint flux</p>
                             $R = \psi^{\dagger} (r_0, E_0, \Omega_0)$
                             </font>
+                        </div>
                         </small>
                     </section>
                     <section>
@@ -626,31 +622,6 @@
                             <p>Munk, Madicken, et al. "FW/CADIS-$\Omega $: An angle-informed hybrid method for deep-penetration radiation transport." arXiv preprint arXiv:1612.00793 (2016).</p>
                             </font>
                         </footer>
-                    </section>
-                    <section>
-                        <h3>Future Work</h3>
-                        <div id="right">
-                            <font size="5" align="left">
-                            <p><b>Idea:</b> Use anisotropy metrics to characterize beyond $\Omega$-methods</p>
-                            <p><b>Deliverable: </b> Robust scheme to recommend method based on problem type, open-source package to calculate anisotropy metrics, </p>
-                            <p><b>Collaborators:</b> ORNL, LANL</p>
-                            <p><b>Funding:</b> DOE-NE, NSF </p>
-                            </font>
-                        </div>
-                        <div id="left">
-                            <img src="./images/omega/futurestats.png" height="275">
-                        </div>
-                    </section>
-                    <section>
-                        <h3>Future Work</h3>
-                        <div>
-                            <font size="5" align="left">
-                            <p><b>Idea: </b> Build out suite of novel analysis tools for nuclear engineering with PyNE+yt, potentially serpent-tools</p>
-                            <p><b>Deliverable: </b> Packaged, documented, and tested suite of open source tools</p>
-                            <p><b>Collaborators:</b> DXL, GaTech</p>
-                            <p><b>Funding:</b> NSF, Moore-Sloan</p>
-                            </font>
-                        </div>
                     </section>
                 </section>
                 <section data-transition="convex">
